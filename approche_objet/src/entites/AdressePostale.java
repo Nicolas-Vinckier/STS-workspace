@@ -7,7 +7,7 @@ public class AdressePostale {
 	String ville = "undefind";
 
 	public String toString() {
-		return(num_rue + " " + lib_rue + " " + cp + " " + ville);
+		return (num_rue + " " + lib_rue + " | Code Postale : " + cp + " | Ville : " + ville);
 	}
 
 }
