@@ -2,9 +2,9 @@
 .metadata
 .classpath
 .project
-approche_objet\.settings
-approche_objet\bin
-approche_objet\src
+\bin
+\src
+\.settings
 
 # Les classes Java
 *.class
