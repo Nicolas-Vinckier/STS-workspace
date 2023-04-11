@@ -1,13 +1,19 @@
 package entites;
 
 public class AdressePostale {
-	int num_rue = 0;
-	String lib_rue = "undefind";
-	int cp = 0;
-	String ville = "undefind";
+	int num_rue;
+	String lib_rue;
+	int cp;
+	String ville;
+
+	public AdressePostale(int num_rue, String lib_rue, int cp, String ville) {
+		this.num_rue = num_rue;
+		this.lib_rue = lib_rue;
+		this.cp = cp;
+		this.ville = ville;
+	}
 
 	public String toString() {
 		return (num_rue + " " + lib_rue + " | Code Postale : " + cp + " | Ville : " + ville);
 	}
-
 }
