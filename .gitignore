@@ -1,1 +1,8 @@
+# Dossier de configuration de STS
 .metadata
+.classpath
+.project
+
+# Les classes Java
+*.class
+
