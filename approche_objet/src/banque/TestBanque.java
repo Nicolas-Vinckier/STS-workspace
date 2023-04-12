@@ -27,7 +27,7 @@ public class TestBanque {
 		CompteTaux compteTaux = new CompteTaux(15673, 943371f, 70f); // Création du "comptetaux"
 		comptes[1] = compteTaux; // Instanciation du compte dans le tableau à la deuxième place
 
-		for (Compte compte : comptes) { // Pour les comptes de la classe compte 
+		for (Compte compte : comptes) { // Pour les comptes (qui est un tableau) de la classe compte 
 			System.out.println(compte.toString()); // imprime le compte
 		}
 
