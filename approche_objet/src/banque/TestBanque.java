@@ -1,14 +1,18 @@
 package banque;
 
-// import banque.*;
-
 public class TestBanque {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Compte compte1 = new Compte(45875, 14.23f); // ne pas oublier le "f" - pour float
-		System.out.println(compte1);
-		System.out.println(compte1.toString());
-	};
+		Compte compte1 = new Compte(45875, 14.23f);
+		// System.out.println(compte1.toString());
 
-};
+		CompteTaux compteTaux1 = new CompteTaux(compte1.getNumeroDeCompte(), compte1.getSolde(), 0.05f);
+		System.out.println(compteTaux1.toString());
+
+		Compte compte2 = new Compte(15673, 943371f);
+		// System.out.println(compte1.toString());
+
+		CompteTaux compteTaux2 = new CompteTaux(compte2.getNumeroDeCompte(), compte2.getSolde(), 70f);
+		System.out.println(compteTaux2.toString());
+	}
+}

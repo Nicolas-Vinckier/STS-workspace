@@ -1,8 +1,8 @@
 package banque;
 
 public class Compte {
-	int numero_de_compte;
-	float solde;
+	protected int numero_de_compte;
+	protected float solde;
 
 	// Constructeur
 	public Compte(int numero_de_compte, float solde) {
@@ -22,6 +22,6 @@ public class Compte {
 
 	// Return
 	public String toString() {
-		return ("Numéro du compte : " + numero_de_compte + " | Solde : " + solde +" €");
+		return ("Numéro du compte : " + numero_de_compte + " | Solde : " + solde + " €" );
 	};
 };
