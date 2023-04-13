@@ -1,9 +1,5 @@
 package banque;
 
-// import banque.Operation;
-// import banque.Debit;
-// import banque.Credit;
-
 public class TestOperation extends Operation {
 	// this.date=super.date;
 	// this.montant=super.montant;
@@ -26,9 +22,28 @@ public class TestOperation extends Operation {
 		opps[2] = new Debit("30/12/2011", 1256.5f);
 		opps[3] = new Credit("01/01/2001", 111.11f);
 
+		float solde = 0; 
+
 		for (int i = 0; i < opps.length; i++) {
+			System.out.println(opps[i].getType());
 			System.out.println(opps[i].toString());
+			System.out.println("Changement du solde : " + solde + " €");
+			System.out.println("");
+
+			if (opps[i] instanceof Debit) {
+				solde -= opps[i].getMontant();
+			} else if (opps[i] instanceof Credit ) {
+				solde += opps[i].getMontant();
+			}
+			
 		}
+		// System.out.println("Votre solde : " + solde);
+	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'getType'");
 	}
 
 }
