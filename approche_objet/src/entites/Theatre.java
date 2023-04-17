@@ -2,12 +2,12 @@ package entites;
 
 public class Theatre {
 	public String nom;
-	public int capMax;
-	public int clientIns;
+	public static int capMax;
+	public static int clientIns;
 	public float recete;
 
-	public Object inscrire(int capMax, int clientIns){
-		if (clientIns < capMax){
+	public static Object inscrire(int capMax, int clientIns) {
+		if (capMax <= clientIns) {
 			System.out.println("Inscription ok");
 		} else {
 			System.out.println("Inscription impossible");
@@ -16,7 +16,10 @@ public class Theatre {
 	}
 
 	public static void main(String[] args) {
-
+		clientIns = 13;
+		capMax = 30; 
+		
+		inscrire(clientIns, capMax);
 
 	}
 
