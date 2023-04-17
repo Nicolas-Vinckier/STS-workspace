@@ -3,7 +3,7 @@ package sets;
 public class TestSetDouble {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		double[] HashSet = { 1.5, 8.25, -7.32, 13.3, -12.45, 48.5, 0.01 };
 
 		double JeanMax = 0;

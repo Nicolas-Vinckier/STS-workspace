@@ -6,7 +6,7 @@ public class TestOperation extends Operation {
 
 	public TestOperation(String date, float montant) {
 		super(date, montant);
-		// TODO Auto-generated constructor stub
+
 	}
 
 	/**
@@ -14,7 +14,7 @@ public class TestOperation extends Operation {
 	 */
 
 	public static void main(String[] args) {
-		// TODO Auto-generated constructor stub
+
 		Operation[] opps = new Operation[4];
 
 		opps[0] = new Debit("12/08/2018", 48.92f);
@@ -42,7 +42,7 @@ public class TestOperation extends Operation {
 
 	@Override
 	public String getType() {
-		// TODO Auto-generated method stub
+
 		throw new UnsupportedOperationException("Unimplemented method 'getType'");
 	}
 

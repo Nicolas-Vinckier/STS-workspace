@@ -24,7 +24,7 @@ public class Pays {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 
 		List<Pays> Paylist = new ArrayList<Pays>();
 		Paylist.add(new Pays("USA", 328200000, 62794));

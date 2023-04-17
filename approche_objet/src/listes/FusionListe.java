@@ -8,7 +8,7 @@ public class FusionListe {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		List<String> liste1 = new ArrayList<String>();
 		liste1.add("Rouge");
 		liste1.add("Vert");

@@ -9,7 +9,7 @@ public class TestListeString {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 
 		List<String> Villeagois = new ArrayList<String>();
 		Villeagois.add("Nice");
