@@ -103,12 +103,13 @@ public class LectureFichier {
 			System.out.println(ville.getPopulationTotale());
 
 			if (ville.getPopulationTotale() > 25000) {
-				lefichier.add(lines.get(i));
+				lefichier.add(ville.getCodeDepartement() + ";" + ville.getNomRegion() + ";" + ville.getPopulationTotale());
 			}
 			i++;
 		}
 
 		Files.write(pathCible, lefichier, Charset.defaultCharset());
+
 		System.out.println("Nombre de villes dans le fichier cible : " + lefichier.size());
 
 	}
