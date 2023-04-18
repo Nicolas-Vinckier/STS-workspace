@@ -15,14 +15,14 @@ public class LectureFichier {
 		public String nom;
 		public String codeDepartement;
 		public String nomRegion;
-		public String populationTotale;
+		public int populationTotale;
 
 		// Constructeur
-		public Ville(String nom, String codeDepartement, String nomRegion, String populationTotale2) {
+		public Ville(String nom, String codeDepartement, String nomRegion, int populationTotale) {
 			this.nom = nom;
 			this.codeDepartement = codeDepartement;
 			this.nomRegion = nomRegion;
-			this.populationTotale = populationTotale2;
+			this.populationTotale = populationTotale;
 		}
 
 		// Getters
@@ -38,7 +38,7 @@ public class LectureFichier {
 			return nomRegion;
 		}
 
-		public String getPopulationTotale() {
+		public int getPopulationTotale() {
 			return populationTotale;
 		}
 	}
@@ -49,6 +49,7 @@ public class LectureFichier {
 				"C:\\Users\\mrcan\\OneDrive\\Bureau\\STS-workspace\\approche_objet\\src\\fichier\\recensement.csv");
 
 		List<String> lines = Files.readAllLines(path, Charset.defaultCharset()); // Lire toutes les lignes
+		lines.remove(0); // Supprime la première ligne
 
 		// Création de la liste d'instances de la classe Ville
 		ArrayList<Ville> villes = new ArrayList<Ville>();
@@ -59,11 +60,21 @@ public class LectureFichier {
 			String[] tokens = ligne.split(";");
 
 			// Extraction des informations
-			String nom = tokens[0];
-			String codeDepartement = tokens[1];
+			// String nom = tokens[0];
+			// String codeDepartement = tokens[1];
+			// String nomRegion = tokens[2];
+			// int populationTotale = Integer.parseInt(tokens[3]);
+			// String codeRegions = tokens[0];
 			String nomRegion = tokens[2];
-			String populationTotale = tokens[3];
+			String codeDepartement = tokens[1];
+			// String codeArrondissement = tokens[3];
+			// String codeCanton = tokens[4];
+			// String nomCommune = tokens[5];
+			// String populationMunicipale = tokens[6];
+			// String populationCompt = tokens[7];
+			int populationTotale = Integer.parseInt(tokens[7].replace(" ", ""));
 
+			String nom = "";
 			// Création d'une instance de la classe Ville
 			Ville ville = new Ville(nom, codeDepartement, nomRegion, populationTotale);
 
@@ -80,8 +91,26 @@ public class LectureFichier {
 		// System.out.println("-----------");
 		// }
 
+		Path pathCible = Paths
+				.get("C:\\Users\\mrcan\\OneDrive\\Bureau\\STS-workspace\\approche_objet\\src\\fichier\\Cible.csv");
+		Files.deleteIfExists(pathCible); // Supprimer le fichier Cible.csv s'il existe déjà
+		Files.createFile(pathCible); // Créer un fichier (vide)
+		List<String> lefichier = new ArrayList<>(); // Créer un tableau
 
-		
+		int i = 0;
+		for (Ville ville : villes) {
+
+			System.out.println(ville.getPopulationTotale());
+
+			if (ville.getPopulationTotale() > 25000) {
+				lefichier.add(lines.get(i));
+			}
+			i++;
+		}
+
+		Files.write(pathCible, lefichier, Charset.defaultCharset());
+		System.out.println("Nombre de villes dans le fichier cible : " + lefichier.size());
+
 	}
 
 }
