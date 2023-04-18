@@ -49,6 +49,18 @@ public class Ville {
 				'}';
 	}
 
+    public char[] getPopulationTotale() {
+        return null;
+    }
+
+    public String getCodeDepartement() {
+        return null;
+    }
+
+    public String getNomRegion() {
+        return null;
+    }
+
 	// Executable
 	// public static void main(String[] args) {
 

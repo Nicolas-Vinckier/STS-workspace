@@ -97,7 +97,6 @@ public class LectureFichier {
 		Files.createFile(pathCible); // Créer un fichier (vide)
 		List<String> lefichier = new ArrayList<>(); // Créer un tableau
 
-		int i = 0;
 		for (Ville ville : villes) {
 
 			System.out.println(ville.getPopulationTotale());
@@ -105,7 +104,6 @@ public class LectureFichier {
 			if (ville.getPopulationTotale() > 25000) {
 				lefichier.add(ville.getCodeDepartement() + ";" + ville.getNomRegion() + ";" + ville.getPopulationTotale());
 			}
-			i++;
 		}
 
 		Files.write(pathCible, lefichier, Charset.defaultCharset());
