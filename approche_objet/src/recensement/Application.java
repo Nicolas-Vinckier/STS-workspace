@@ -62,30 +62,30 @@ public class Application {
 
 	// Execution
 	public static void main(String[] args) throws IOException {
-		// Path principale
-		Path path = Paths.get(
-				"C:\\Users\\mrcan\\OneDrive\\Bureau\\STS-workspace\\approche_objet\\src\\recensement\\recensement.csv");
+		// // Path principale
+		// Path path = Paths.get(
+		// 		"C:\\Users\\mrcan\\OneDrive\\Bureau\\STS-workspace\\approche_objet\\src\\recensement\\recensement.csv");
 
-		List<String> lines = Files.readAllLines(path, Charset.defaultCharset()); // Lire toutes les lignes
-		lines.remove(0); // Supprime la première ligne
+		// List<String> lines = Files.readAllLines(path, Charset.defaultCharset()); // Lire toutes les lignes
+		// lines.remove(0); // Supprime la première ligne
 
-		// Création de la liste d'instances de la classe Ville
-		ArrayList<String> villes = new ArrayList<>();
+		// // Création de la liste d'instances de la classe Ville
+		// ArrayList<String> villes = new ArrayList<>();
 
-		for (String ligne : lines) {
-			// Découpage de la ligne en tableau de chaînes de caractères
-			String[] tokens = ligne.split(";");
-			String codeDepartement = tokens[1];
-			String nomRegion = tokens[2];
-			int populationTotale = Integer.parseInt(tokens[7].replace(" ", ""));
-			String nom = "";
+		// for (String ligne : lines) {
+		// 	// Découpage de la ligne en tableau de chaînes de caractères
+		// 	String[] tokens = ligne.split(";");
+		// 	String codeDepartement = tokens[1];
+		// 	String nomRegion = tokens[2];
+		// 	int populationTotale = Integer.parseInt(tokens[7].replace(" ", ""));
+		// 	String nom = "";
 
-			// Création d'une instance de la classe region 
-			Region region = new ArrayList(Region.getCodeDepartement);
+		// 	// Création d'une instance de la classe region 
+		// 	Region region = new ArrayList(Region.getCodeDepartement);
 
-			// Ajout de l'instance à la liste
-			villes.add(ville);
+		// 	// Ajout de l'instance à la liste
+		// 	villes.add(ville);
 		}
 	}
 
-}
+// }
