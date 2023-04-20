@@ -19,4 +19,14 @@ public enum Saison {
         return num;
     }
 
+    public static Saison aleSaison(String l) {
+        for (Saison s : Saison.values()) {
+            if (s.getNom().equals(l)) {
+                return s;
+            }
+        }
+
+        return null;
+    }
+
 }
